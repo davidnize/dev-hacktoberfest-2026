@@ -1,0 +1,16 @@
+{
+  "name": "pocket-ledger",
+  "version": "1.0.0",
+  "description": "A private, local-first expense sorter for freelancers powered by an open-weight model.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
