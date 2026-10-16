@@ -275,7 +275,7 @@ app.use((error, _request, response, _next) => {
 });
 
 await mkdir(dataDirectory, { recursive: true });
-app.listen(port, "127.0.0.1", () => {
-  console.log(`Pocket Ledger is running at http://127.0.0.1:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Pocket Ledger is listening on 0.0.0.0:${port}`);
   console.log(`Local model: ${model} via ${ollamaUrl}`);
 });

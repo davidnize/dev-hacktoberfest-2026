@@ -33,7 +33,7 @@ If Ollama is not running, or the model has not been pulled, choose a category in
 | `OLLAMA_URL` | `http://127.0.0.1:11434` | Local Ollama server URL |
 | `OLLAMA_MODEL` | `qwen2.5:3b` | Installed Ollama model name |
 
-For example, set `OLLAMA_MODEL` to another Ollama model that supports JSON-format output. The app binds to `127.0.0.1` so it is not exposed to your local network by default.
+For example, set `OLLAMA_MODEL` to another Ollama model that supports JSON-format output. The server listens on `0.0.0.0` and `PORT` (3000 when `PORT` is unset). On your own machine, open [http://127.0.0.1:3000](http://127.0.0.1:3000).
 
 ## Stack
 
