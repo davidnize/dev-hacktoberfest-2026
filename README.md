@@ -10,9 +10,10 @@ Built for the Hacktoberfest Weekend Challenge: **Build for a Friend**.
 
 - **Your words stay yours.** Entries are saved exactly as you type them. No AI rewrites or edits them.
 - **A question of the day.** The grey placeholder in the entry box is a short question, written fresh each day by Gemma. You can answer it or write about something else.
+- **A Bible verse each day.** Each day, the app provides a Bible verse for daily inspiration and reflection.
 - **"This week between us."** Every Saturday at 9 pm, Gemma reads the week's entries and writes a short recap. It is always labelled as AI-written, so it is never confused with your own words.
 - **Private.** You log in with your name and a shared passphrase.
-- Your entries on the right, theirs on the left.
+- **Shared view.** Your entries appear on the right, theirs on the left.
 
 ## Built with
 
