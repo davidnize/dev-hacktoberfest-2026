@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pocket Ledger</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <p class="eyebrow">Freelancer expenses, on this computer</p>
+      <h1>Pocket Ledger</h1>
+      <p class="lede">Add what you spent. When the local model is running, it suggests a category and a short reason. The ledger stays in a file on this machine.</p>
+      <p class="help">On the public demo, this ledger is shared and resets when the service restarts.</p>
+    </div>
+    <p id="model-status" class="status status-loading" role="status">Checking the local model…</p>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="add-heading">
+      <h2 id="add-heading">Add an expense</h2>
+      <form id="expense-form" novalidate>
+        <label>
+          Description
+          <input id="description" name="description" type="text" maxlength="500" required autocomplete="off" placeholder="e.g. Train to a client site">
+        </label>
+        <label>
+          Merchant <span class="optional">optional</span>
+          <input id="merchant" name="merchant" type="text" maxlength="100" autocomplete="organization" placeholder="e.g. Amtrak">
+        </label>
+        <div class="split">
+          <label>
+            Amount
+            <input id="amount" name="amount" type="text" inputmode="decimal" required autocomplete="off" placeholder="e.g. 42.00">
+          </label>
+          <label>
+            Date
+            <input id="date" name="date" type="date" required>
+          </label>
+        </div>
+        <label>
+          Category
+          <select id="category" name="category">
+            <option value="">Let the model choose</option>
+            <option>Advertising</option>
+            <option>Meals</option>
+            <option>Office supplies</option>
+            <option>Software</option>
+            <option>Travel</option>
+            <option>Utilities</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <p id="category-help" class="help">If the model is offline, pick a category from this list so the expense can still be saved.</p>
+        <p id="form-error" class="message error" role="alert" hidden></p>
+        <button id="save-button" type="submit">Save expense</button>
+      </form>
+    </section>
+
+    <section class="panel ledger-panel" aria-labelledby="ledger-heading">
+      <div class="ledger-head">
+        <h2 id="ledger-heading">Ledger</h2>
+        <p id="totals" class="totals">Loading totals…</p>
+      </div>
+      <div id="ledger" aria-live="polite">Loading your ledger…</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>A category from the model is an organizational aid, not tax or accounting advice. Check it before you use it for a filing.</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
